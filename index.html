@@ -33,14 +33,14 @@
  
  <script>
  function playAudioAndGif() {
-  var audio = new Audio('test1new/Runaway.mp3');
+  var audio = new Audio('Runaway.mp3');
   audio.loop = true;
   audio.play();
   
   var gif = document.createElement("img");
-  gif.src = "test1new/Runaway.jpg";
+  gif.src = "Runaway.jpg";
   gif.width = 1920;
-  gif.height = 1920;
+  gif.height = 1080;
   
   document.body.appendChild(gif);
   document.getElementById("playButton").remove();
