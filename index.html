@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
- <title>ye</title>
- <style>
- 	
- body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  overflow: hidden; /* to prevent the gradient from overflowing */
-  background-color: black;
-  animation: gradientAnimation 10s linear infinite; /* Add gradient animation */
- }
- 
- button {
-  background-color: blue;
-  width: 190px;
-  height: 50px;
-  font-size: 20px;
-  color: white;
-  font-family: Helvetica;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
- }
- 
- @keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
- }
 
- </style>
+<head>
+  <title>ye</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to right, purple, violet, pink);
+      animation: gradientAnimation 10s linear infinite;
+    }
+
+    button {
+      background-color: blue;
+      width: 250px; /* Adjusted width */
+      height: 60px; /* Adjusted height */
+      font-size: 20px;
+      color: white;
+      font-family: Helvetica;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      position: absolute;
+      z-index: 1;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
 </head>
+
 <body>
- <button id="playButton" onclick="playAudioAndGif()">button's finna runaway if you click this.</button>
- 
- <script>
- function playAudioAndGif() {
-  var audio = new Audio('Runaway.mp3');
-  audio.loop = true;
-  audio.play();
-  
-  var gif = document.createElement("img");
-  gif.src = "Runaway.jpg";
-  gif.width = 1920;
-  gif.height = 1080;
-  
-  document.body.appendChild(gif);
-  document.getElementById("playButton").remove();
- }
- </script>
+  <button id="playButton" onclick="playAudioAndGif()">button's finna runaway if you click this.</button>
+
+  <script>
+    function playAudioAndGif() {
+      var audio = new Audio('Runaway.mp3');
+      audio.loop = true;
+      audio.play();
+
+      var gif = document.createElement("img");
+      gif.src = "Runaway.jpg";
+      gif.width = 1920;
+      gif.height = 1080;
+
+      document.body.appendChild(gif);
+      document.getElementById("playButton").remove();
+    }
+  </script>
 </body>
+
 </html>
