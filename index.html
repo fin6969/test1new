@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>?</title>
+ <title>ye</title>
  <style>
  	
  body {
@@ -10,7 +10,9 @@
   justify-content: center;
   height: 100vh;
   margin: 0;
+  overflow: hidden; /* to prevent the gradient from overflowing */
   background-color: black;
+  animation: gradientAnimation 10s linear infinite; /* Add gradient animation */
  }
  
  button {
@@ -26,10 +28,22 @@
   justify-content: center;
  }
  
+ @keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+ }
+
  </style>
 </head>
 <body>
- <button id="playButton" onclick="playAudioAndGif()">PLAY ME man</button>
+ <button id="playButton" onclick="playAudioAndGif()">button's finna runaway if you click this.</button>
  
  <script>
  function playAudioAndGif() {
